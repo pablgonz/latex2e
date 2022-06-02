@@ -1,0 +1,336 @@
+This is a generated file for the LaTeX2e validation system.
+Don't change this file in any respect.
+Author: Frank Mittelbach
+============================================================
+TEST 1: Testing object types
+============================================================
+Package template Info: Declaring object type 'ok' taking 4 argument(s) on line
+(template)             58.
+Package template Info: Declaring object type 'ok' taking 3 argument(s) on line
+(template)             58.
+! Package template Error: Bad number of arguments for object type 'too-big'.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+An object may accept between 0 and 9 arguments.
+You asked to use 10 arguments: this is not supported.
+! Package template Error: The object type 'too-big' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+An object type needs to be declared with \DeclareObjectType prior to using it.
+! Package template Error: Bad number of arguments for object type 'too-small'.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+An object may accept between 0 and 9 arguments.
+You asked to use -1 arguments: this is not supported.
+! Package template Error: The object type 'too-small' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+An object type needs to be declared with \DeclareObjectType prior to using it.
+============================================================
+============================================================
+TEST 2: Testing object types argument values
+============================================================
+Package template Info: Declaring object type 'now-defined' taking 2
+(template)             argument(s) on line ....
+Defining \template defaults > now-defined/tname on line ...
+Defining \template key types > now-defined/tname on line ...
+Defining \template key order > now-defined/tname on line ...
+! Package template Error: Object type 'now-defined' takes 2 argument(s).
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+Objects of type 'now-defined' require 2 argument(s).
+You have tried to make a template for 'now-defined' with 1 argument(s), which
+is not possible: the number of arguments must agree.
+============================================================
+============================================================
+TEST 3: Testing key types and names
+============================================================
+! Package template Error: The key-type 'misspelled' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+Valid key-types are:
+- boolean;
+- choice;
+- code;
+- commalist;
+- function;
+- instance;
+- integer;
+- length;
+- muskip;
+- real;
+- skip;
+- tokenlist.
+Defining \template defaults > test/tname on line ...
+Defining \template key types > test/tname on line ...
+Defining \template key order > test/tname on line ...
+The template 'tname' of object type 'test' has interface:
+>  key1  =>  boolean
+>  key2  =>  choice{a,b}
+>  key3  =>  code
+>  key4  =>  commalist
+>  key5  =>  function{3}
+>  key6  =>  instance{foo}
+>  key7  =>  integer
+>  key8  =>  length
+>  key9  =>  skip
+>  key10  =>  tokenlist.
+<recently read> }
+l. ...}
+! Package template Error: The key 'key' is missing a key-type on line ....
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+Key interface definitions should be of the form
+  key : <key-type>
+but LaTeX could not find a <key-type>.
+============================================================
+============================================================
+TEST 4: Testing key names
+============================================================
+! Package template Error: Key 'key' appears twice in interface definition on
+(template)                line 126.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+Each key can only have one interface declared in a template.
+LaTeX found two interfaces for 'key'.
+The template 'tname' of object type 'test' has interface:
+>  key  =>  integer.
+<recently read> }
+l. ...}
+! Package template Error: The template 'tname' of type 'test' is unknown or
+(template)                has no implementation.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+There is no code available for the template name given.
+This should be given using \DeclareTemplateCode .
+============================================================
+============================================================
+TEST 5: Testing incomplete key types
+============================================================
+! Package template Error: The key type 'choice' requires an argument on line
+(template)                141.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+You should have put:
+  <key-name> : choice { <argument> }
+but LaTeX did not find an <argument>.
+! Package template Error: The key type 'function' requires an argument on line
+(template)                141.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+You should have put:
+  <key-name> : function { <argument> }
+but LaTeX did not find an <argument>.
+! Package template Error: The key type 'instance' requires an argument on line
+(template)                141.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+You should have put:
+  <key-name> : instance { <argument> }
+but LaTeX did not find an <argument>.
+The template 'tname' of object type 'test' has no interface.
+> .
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 6: Testing incorrect key defaults
+============================================================
+The template 'tname' of object type 'test' has interface:
+>  key  =>  choice{a,b}
+>  key2  =>  boolean.
+<recently read> }
+l. ...}
+The template 'tname' of object type 'test' has default values:
+>  key  =>  c
+>  key2  =>  anotherdimension.
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 7: Testing signature interface
+============================================================
+! Package template Error: The object type 'not-defined' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ... }
+An object type needs to be declared with \DeclareObjectType prior to using it.
+! Package template Error: Object type 'test' takes 1 argument(s).
+For immediate help type H <return>.
+ ...                                              
+l. ... }
+Objects of type 'test' require 1 argument(s).
+You have tried to make a template for 'test' with 10 argument(s), which is not
+possible: the number of arguments must agree.
+============================================================
+============================================================
+TEST 8: Same template name different types
+============================================================
+Package template Info: Declaring object type 'ok' taking 3 argument(s) on line
+(template)             177.
+Package template Info: Declaring object type 'also-ok' taking 2 argument(s) on
+(template)             line 177.
+Defining \template defaults > ok/tname on line ...
+Defining \template key types > ok/tname on line ...
+Defining \template key order > ok/tname on line ...
+Defining \template defaults > also-ok/tname on line ...
+Defining \template key types > also-ok/tname on line ...
+Defining \template key order > also-ok/tname on line ...
+============================================================
+============================================================
+TEST 9: Testing key defaults
+============================================================
+The template 'tname' of object type 'test' has default values:
+>  key1  =>  false
+>  key2  =>  b
+>  key4  =>  1,2
+>  key5  =>  (##3##2##1)
+>  key6  =>  bar
+>  key7  =>  99
+>  key8  =>  1sp
+>  key9  =>  0plus1filll
+>  key10  =>  none.
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 10: Testing code interface
+============================================================
+! Package template Error: The object type 'not-defined' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+An object type needs to be declared with \DeclareObjectType prior to using it.
+! Package template Error: Object type 'test' takes 1 argument(s).
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+Objects of type 'test' require 1 argument(s).
+You have tried to make a template for 'test' with 2 argument(s), which is not
+possible: the number of arguments must agree.
+> \template code > test/tname=undefined.
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 11: Testing code interface missing var assignment
+============================================================
+Defining \l_X_tl on line ...
+Defining key template/test/tname/key1 on line ...
+Defining \template vars > test/tname on line ...
+! Package template Error: Key 'key2' has no implementation on line ....
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+The definition of key implementations for template 'tname' of object type
+'test' does not include any details for key 'key2'.
+The key was declared in the interface definition, and so an implementation is
+required.
+! Package template Error: The template attribute 'key2' is unknown.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+There is a definition in the current template reading
+  \KeyValue{ key2 }
+but there is no key called 'key2'.
+============================================================
+============================================================
+TEST 12: Testing code interface var assignments
+============================================================
+Defining key template/test/tname/key1 on line ...
+Defining key template/test/tname/key2 on line ...
+============================================================
+============================================================
+TEST 13: Testing code interface: missing var declarations
+============================================================
+Defining \template defaults > test/tname3 on line ...
+Defining \template key types > test/tname3 on line ...
+Defining \template key order > test/tname3 on line ...
+Defining key template/test/tname3/key1 on line ...
+Defining \l_Y_tl on line ...
+Defining key template/test/tname3/key2 on line ...
+Defining \template vars > test/tname3 on line ...
+> \template code > test/tname3=\protected\long macro:#1->\AssignTemplateKeys .
+<recently read> }
+l. ...}
+The template 'tname3' of object type 'test' has variable mapping:
+>  key1  =>  \l_X_tl 
+>  key2  =>  \l_Y_tl .
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 14: Testing code interface: missing var declarations
+============================================================
+Defining key template/test/tname3/key1 on line ...
+! Package template Error: Incorrect variable description 'glabol'.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+The argument 'glabol' is not of the form
+'<variable>'
+or 
+'global <variable>'.
+It must be given in one of these formats to be used in a template.
+Defining key template/test/tname3/key3 on line ...
+> \template code > test/tname3=\protected\long macro:#1->\AssignTemplateKeys .
+<recently read> }
+l. ...}
+The template 'tname3' of object type 'test' has variable mapping:
+>  key1  =>  \l_X_tl 
+>  key3  =>  global\l_X_int .
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 15: Testing code interface: choices
+============================================================
+============================================================
+============================================================
+TEST 16: Testing interfaces in document preamble
+============================================================
+Package template Info: Declaring object type 'test' taking 1 argument(s) on
+(template)             line 330.
+Defining key template/test/tname3/key on line ...
+Defining key template/test/tname3/key/unknown on line ...
+Defining key template/test/tname3/key/A on line ...
+Defining key template/test/tname3/key/B on line ...
+> \template code > test/tname3=\protected\long macro:#1->\AssignTemplateKeys .
+<recently read> }
+l. ...}
+The template 'tname3' of object type 'test' has variable mapping:
+>  key  =>  
+>  key A  =>  \typeout {hello}
+>  key B  =>  \typeout {huh}.
+<recently read> }
+l. ...}
+============================================================
+============================================================
+TEST 17: Testing instances: declare instance
+============================================================
+! Package template Error: The template 'never-defined' of type 'test' is
+(template)                unknown or has no implementation.
+For immediate help type H <return>.
+ ...                                              
+l. ...}
+There is no code available for the template name given.
+This should be given using \DeclareTemplateCode .
+Defining \template values > test/myinstance on line ...
+Defining \template values > test/myinstance2 on line ...
+hello
+(X-99)
+huh
+(Y-99)
+============================================================
