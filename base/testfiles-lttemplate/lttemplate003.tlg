@@ -318,7 +318,16 @@ The template 'tname3' of object type 'test' has variable mapping:
 l. ...}
 ============================================================
 ============================================================
-TEST 17: Testing instances: declare instance
+TEST 17: Testing instances: existance check
+============================================================
+No
+No
+Defining \template values > test/myinstance on line ...
+Yes
+No
+============================================================
+============================================================
+TEST 18: Testing instances: declare instance
 ============================================================
 ! Package template Error: The template 'never-defined' of type 'test' is
 (template)                unknown or has no implementation.
@@ -327,7 +336,6 @@ For immediate help type H <return>.
 l. ...}
 There is no code available for the template name given.
 This should be given using \DeclareTemplateCode .
-Defining \template values > test/myinstance on line ...
 Defining \template values > test/myinstance2 on line ...
 hello
 (X-99)

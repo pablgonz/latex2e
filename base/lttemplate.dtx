@@ -358,6 +358,19 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}[TF]{\@@_if_instance_exist:nn}
+%   Testing for an instance.
+%    \begin{macrocode}
+\prg_new_conditional:Npnn \@@_if_instance_exist:nn #1#2
+  { T, F, TF }
+  {
+    \cs_if_exist:cTF { \c_@@_instances_root_tl #1 / #2 }
+      { \prg_return_true: }
+      { \prg_return_false: }
+ }
+%    \end{macrocode}
+% \end{macro}
+%
 % \begin{macro}{\@@_if_use_template:nTF}
 %   Tests for the first token in a string being \cs{UseTemplate}.
 %    \begin{macrocode}
@@ -1952,6 +1965,18 @@
 % \end{macro}
 % \end{macro}
 % \end{macro}
+% \end{macro}
+%
+% \begin{macro}[TF]{\IfInstanceExist}
+%   Simple copies.
+%    \begin{macrocode}
+\cs_new:Npn \IfInstanceExistTF #1#2
+  { \@@_if_instance_exist:nnTF {#1} {#2} }
+\cs_new:Npn \IfInstanceExistT #1#2
+  { \@@_if_instance_exist:nnT {#1} {#2} }
+\cs_new:Npn \IfInstanceExistF #1#2
+  { \@@_if_instance_exist:nnF {#1} {#2} }
+%    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\KeyValue}

@@ -1444,6 +1444,14 @@ read:
 Of course, the key names here are entirely imaginary, but illustrate
 the general idea of fixing some settings.
 
+\begin{decl}
+  |\IfInstanceExistT| \arg{obj.~type} \arg{instance} \arg{true code} \\
+  |\IfInstanceExistF| \arg{obj.~type} \arg{instance} \arg{false code} \\
+  |\IfInstanceExistTF| \arg{obj.~type} \arg{instance} \arg{true code} \arg{false code}
+\end{decl}
+Tests if the named \meta{instance} of a \meta{object type} exists, and
+then inserts the appropriate code into the input stream.
+
 \subsection{Document interface}
 
 After the instances have been chosen, document commands must be
