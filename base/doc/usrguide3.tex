@@ -1483,4 +1483,49 @@ key types:
     }
 \end{verbatim}
 
+\subsection{\emph{Ad hoc} adjustment of templates}
+
+\begin{decl}
+  |\SetTemplateKeys| \arg{obj.~type} \arg{template} \arg{parameters}
+\end{decl}
+
+At point of use it may be useful to apply changed to individual instances.
+This is supported as each template key is made available for adjustment
+using \cs{SetTemplateKeys}.
+
+For example, after
+\begin{verbatim}
+  \DeclareObjectType{MyObj}{0}
+  \DeclareTemplateInterface{MyObj}{TemplateA}{0}
+    {
+      akey: tokenlist  ,
+      bkey: function{2}
+    }
+  \DeclareTemplateCode{MyObj}{TemplateA}{0}
+    {
+      akey = SomeTokens ,
+      bkey = \func:nn ,
+    }
+\end{verbatim}
+the template keys could be adjusted in an \emph{ad hoc} fashion using
+\begin{verbatim}
+  \SetTemplateKeys{MyObj}{TemplateA}
+    {
+      akey = OtherTokens ,
+      bkey = \AltFunc:nn
+    }
+\end{verbatim}
+
+\subsection{Getting information about templates and instances}
+
+\begin{decl}
+  |\ShowTemplateInterface| \arg{obj.~type} \arg{template} \\
+  |\ShowTemplateDefaults| \arg{obj.~type} \arg{template} \\
+  |\ShowTemplateCode| \arg{obj.~type} \arg{template} \\
+  |\ShowTemplateVariables| \arg{obj.~type} \arg{template} \\
+  |\ShowInstanceValues| \arg{obj.~type} \arg{instance} \\
+\end{decl}
+These functions show data on the appropriate part of the template or instance
+structure.
+
 \end{document}
