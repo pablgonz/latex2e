@@ -720,7 +720,11 @@
                   {
                     \tl_set:Nx \l_@@_keytype_tl
                       { \tl_trim_spaces:n {##1} }
-                    \tl_set:Nx \l_@@_keytype_arg_tl { \use:n ####2 }
+                    \tl_if_blank:nF {####2}
+                      {
+                        \tl_set:Nx \l_@@_keytype_arg_tl
+                          { \use:n ####2 }
+                      }
                     \seq_map_break:
                   }
               }
