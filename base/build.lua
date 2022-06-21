@@ -107,7 +107,7 @@ typesetfiles   =
     "ltx3info.tex",
     "modguide.tex",
     "usrguide-old.tex",
-    "usrguide3.tex",
+    "usrguide.tex",
     "latexchanges.tex",
     "*-doc.tex",
     "*-code.tex",
