@@ -6,6 +6,11 @@ completeness or accuracy and it contains some references to files that
 are not part of the distribution.
 ================================================================================
 
+2022-06-23  Joseph Wright <Joseph.Wright@latex-project.org>
+
+	* ltoutput.dtx
+	Add registers \stockheight and \stockwidth
+
 ================================================================================
 All changes above are only part of the development branch for the next release.
 ================================================================================
